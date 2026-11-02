@@ -1,0 +1,39 @@
+version: 0.0.1
+type: plugin
+author: glorycloud
+name: glorycloud-serp-api
+repo: https://github.com/GoProxyTeam/Dify-glorycloud-serp-api
+label:
+  en_US: glorycloud SERP API
+  ja_JP: glorycloud SERP API
+  zh_Hans: glorycloud SERP API
+  pt_BR: glorycloud SERP API
+description:
+  en_US: Search Google web, images, shopping, news and maps through the GloryCloud SERP API. New users receive $1 in signup credit, redeemable for 1,000 free queries.
+  ja_JP: Search Google web, images, shopping, news and maps through the GloryCloud SERP API.
+  zh_Hans: 通过 GloryCloud SERP API 获取 Google 网页、图片、购物、新闻和地图的搜索结果。
+  pt_BR: Search Google web, images, shopping, news and maps through the GloryCloud SERP API.
+icon: icon.png
+icon_dark: icon.png
+resource:
+  memory: 268435456
+  permission: {}
+plugins:
+  tools:
+    - provider/glorycloud-serp-api.yaml
+meta:
+  version: 0.0.1
+  arch:
+    - amd64
+    - arm64
+  runner:
+    language: python
+    version: "3.12"
+    entrypoint: main
+  minimum_dify_version: null
+created_at: 2026-10-17T15:46:41.02922165+08:00
+privacy: PRIVACY.md
+network:
+  domains:
+    - serpapi.glorycloud.com
+verified: false
