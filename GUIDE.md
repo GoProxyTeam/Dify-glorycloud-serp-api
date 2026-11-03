@@ -18,7 +18,7 @@ Each wrapper fixes the engine in code. Manifests contain only their applicable f
 
 Version 0.0.1 is the first Marketplace release and uses the production HTTPS endpoint. The combined `glorycloud-serp-api` tool from earlier local development packages is no longer registered. Existing nodes from local version 0.1.0 or earlier must be replaced with the appropriate independent tool and downstream references rebound. Provider identity and credential schema remain the same. Authentication and the result envelope retain the goproxy protocol.
 
-Detailed README parameter tables are replaced by the verified official documentation link: `https://docs.glorycloud.com/api-reference/SERP-API/Use?link=1142bb`. The README retains a five-tool capability list, workflow example, output instructions and migration guidance.
+Detailed README parameter tables are replaced by the verified official documentation link: `https://docs.glorycloud.com/api-reference/SERP-API/?link=1142bb`. The README retains a five-tool capability list, workflow example, output instructions and migration guidance.
 
 ## goproxy protocol
 

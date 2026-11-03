@@ -1,0 +1,158 @@
+identity:
+  name: google_news
+  author: glorycloud
+  label:
+    en_US: Google News Search
+    zh_Hans: 新闻搜索
+description:
+  human:
+    en_US: Search Google News by keyword and time range with GloryCloud. Find coverage for topic briefings and news summaries. New users receive $1 in signup credit, redeemable for 1,000 free queries.
+    zh_Hans: 搜索 Google 新闻，支持按时间范围筛选。
+  llm: Search Google news with an optional publication time range. Returns the complete response including data.requestId
+    and data.result. Do not automatically retry timeouts; a search may still complete and be billed.
+parameters:
+- name: query
+  type: string
+  required: true
+  label:
+    en_US: Search keywords
+    zh_Hans: 搜索关键词
+  human_description:
+    en_US: Search keywords; at most 2048 UTF-8 bytes.
+    zh_Hans: 输入搜索关键词，不超过 2048 字节。
+  llm_description: Search keywords; at most 2048 UTF-8 bytes.
+  form: llm
+- name: language
+  type: string
+  required: false
+  label:
+    en_US: Interface language
+    zh_Hans: 界面语言
+  human_description:
+    en_US: Optional language code such as en or zh-CN. Empty uses service defaults.
+    zh_Hans: 可选，例如 en、zh-CN；留空使用服务默认值。
+  llm_description: Optional language code such as en or zh-CN. Empty uses service defaults.
+  form: form
+- name: maxResults
+  type: number
+  required: false
+  label:
+    en_US: Maximum results
+    zh_Hans: 结果数上限
+  human_description:
+    en_US: 'Optional: 1–100; 0 or empty means no additional truncation. This limits results, not the number of search
+      calls.'
+    zh_Hans: 可选：1–100；0 或留空表示不额外截断，不改变本次搜索的调用次数。
+  llm_description: 'Optional: 1–100; 0 or empty means no additional truncation. This limits results, not the number
+    of search calls.'
+  form: llm
+  min: 0
+  max: 100
+  precision: 0
+- name: format
+  type: select
+  required: false
+  label:
+    en_US: Result format
+    zh_Hans: 结果格式
+  human_description:
+    en_US: JSON, raw HTML, or both. DOM mapping always returns JSON and HTML.
+    zh_Hans: 选择结构化结果、原始网页或两者；开启定位映射后会同时返回两者。
+  llm_description: JSON, raw HTML, or both. DOM mapping always returns JSON and HTML.
+  form: form
+  default: json
+  options:
+  - value: json
+    label:
+      en_US: JSON
+      zh_Hans: 结构化结果（JSON）
+  - value: html
+    label:
+      en_US: HTML
+      zh_Hans: 原始网页（HTML）
+  - value: json+html
+    label:
+      en_US: JSON + HTML
+      zh_Hans: 结构化结果 + 原始网页
+- name: location
+  type: string
+  required: false
+  label:
+    en_US: Search location
+    zh_Hans: 搜索地区
+  human_description:
+    en_US: Canonical place name such as California,United States; empty means no location restriction.
+    zh_Hans: 标准地名，例如 California,United States；留空不限制地区。
+  llm_description: Canonical place name such as California,United States; empty means no location restriction.
+  form: form
+- name: domain
+  type: string
+  required: false
+  label:
+    en_US: Google domain suffix
+    zh_Hans: Google 域名后缀
+  human_description:
+    en_US: For example com or co.uk; empty uses com.
+    zh_Hans: 例如 com、co.uk；留空使用 com。
+  llm_description: For example com or co.uk; empty uses com.
+  form: form
+- name: page
+  type: number
+  required: false
+  label:
+    en_US: Page number
+    zh_Hans: 页码
+  human_description:
+    en_US: Integer at least 1; empty uses page 1. One page per call.
+    zh_Hans: 不小于 1 的整数，留空为第 1 页；每次查询一页。
+  llm_description: Integer at least 1; empty uses page 1. One page per call.
+  form: llm
+  min: 1
+  precision: 0
+- name: domMap
+  type: boolean
+  required: false
+  label:
+    en_US: DOM mapping
+    zh_Hans: 定位映射
+  human_description:
+    en_US: Include loc selectors when available, together with JSON and HTML; not supported for maps.
+    zh_Hans: 同时返回结构化结果与原始网页，可用时附带 loc 定位信息；地图不支持。
+  llm_description: Include loc selectors when available, together with JSON and HTML; not supported for maps.
+  form: form
+  default: false
+- name: timeRange
+  type: select
+  required: false
+  label:
+    en_US: Time range
+    zh_Hans: 时间范围
+  human_description:
+    en_US: Empty means any time.
+    zh_Hans: 留空表示不限时间。
+  llm_description: Empty means any time.
+  form: form
+  options:
+  - value: 1h
+    label:
+      en_US: Past hour
+      zh_Hans: 最近 1 小时
+  - value: 1d
+    label:
+      en_US: Past day
+      zh_Hans: 最近 1 天
+  - value: 7d
+    label:
+      en_US: Past 7 days
+      zh_Hans: 最近 7 天
+  - value: 1m
+    label:
+      en_US: Past month
+      zh_Hans: 最近 1 个月
+  - value: 1y
+    label:
+      en_US: Past year
+      zh_Hans: 最近 1 年
+extra:
+  python:
+    source: tools/google_news.py

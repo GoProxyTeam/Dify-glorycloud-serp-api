@@ -179,4 +179,6 @@ Thumbs.db
 # Development-only files
 tests/
 GUIDE.md
+log.md
+.env.example
 uv.lock

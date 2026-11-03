@@ -16,7 +16,7 @@ Google Web Search by GloryCloud retrieves structured Google web search results w
 
 Use the results for online research and content organization, or pass them to an LLM node for summarization or a code node for further processing. Searches use your GloryCloud API Key and account quota.
 
-[API Documentation](https://docs.glorycloud.com/api-reference/SERP-API/Use?link=1142bb) · Pricing
+[API Documentation](https://docs.glorycloud.com/api-reference/SERP-API/?link=1142bb) · [Pricing](https://www.glorycloud.com/pricing/serp-api/?link=1142bb)
 
 ### Getting Started
 
@@ -108,7 +108,7 @@ Google Image Search by GloryCloud retrieves images, thumbnails, and source infor
 
 Pass the structured results to subsequent nodes to organize image and source information or process the data further. Searches use your GloryCloud API Key and account quota.
 
-[API Documentation](https://docs.glorycloud.com/api-reference/SERP-API/Use?link=1142bb) · Pricing
+[API Documentation](https://docs.glorycloud.com/api-reference/SERP-API/?link=1142bb) · [Pricing](https://www.glorycloud.com/pricing/serp-api/?link=1142bb)
 
 ### Getting Started
 
@@ -200,7 +200,7 @@ Google Shopping Search by GloryCloud retrieves product listings, prices, and mer
 
 Use the results to compare product offers and organize pricing and merchant information. Structured output can be passed to an LLM node for summarization or a code node for further processing. Searches use your GloryCloud API Key and account quota.
 
-[API Documentation](https://docs.glorycloud.com/api-reference/SERP-API/Use?link=1142bb) · Pricing
+[API Documentation](https://docs.glorycloud.com/api-reference/SERP-API/?link=1142bb) · [Pricing](https://www.glorycloud.com/pricing/serp-api/?link=1142bb)
 
 ### Getting Started
 
@@ -292,7 +292,7 @@ Google News Search by GloryCloud retrieves structured news search results within
 
 Use the results to research news coverage and organize articles, or pass them to an LLM node for summarization or a code node for further processing. Searches use your GloryCloud API Key and account quota.
 
-[API Documentation](https://docs.glorycloud.com/api-reference/SERP-API/Use?link=1142bb) · Pricing
+[API Documentation](https://docs.glorycloud.com/api-reference/SERP-API/?link=1142bb) · [Pricing](https://www.glorycloud.com/pricing/serp-api/?link=1142bb)
 
 ### Getting Started
 
@@ -364,7 +364,7 @@ Google Maps Search by GloryCloud retrieves structured place and business informa
 
 Use the results for business discovery and location research, or pass them to an LLM node for summarization or a code node for further processing. Searches use your GloryCloud API Key and account quota.
 
-[API Documentation](https://docs.glorycloud.com/api-reference/SERP-API/Use?link=1142bb) · Pricing
+[API Documentation](https://docs.glorycloud.com/api-reference/SERP-API/?link=1142bb) · [Pricing](https://www.glorycloud.com/pricing/serp-api/?link=1142bb)
 
 ### Getting Started
 
@@ -428,7 +428,7 @@ For help, contact support@glorycloud.com. To keep your account secure, please le
 
 ## Search parameters
 
-The five tools use separate search APIs with different parameters. Refer to the [GloryCloud SERP API documentation](https://docs.glorycloud.com/api-reference/SERP-API/Use?link=1142bb) for the relevant API's parameter descriptions, required fields and request examples.
+The five tools use separate search APIs with different parameters. Refer to the [GloryCloud SERP API documentation](https://docs.glorycloud.com/api-reference/SERP-API/?link=1142bb) for the relevant API's parameter descriptions, required fields and request examples.
 
 Fill in the corresponding settings in the Dify tool node according to the documentation for your selected API.
 

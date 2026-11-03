@@ -3,6 +3,7 @@ type: plugin
 author: glorycloud
 name: glorycloud-serp-api
 repo: https://github.com/GoProxyTeam/Dify-glorycloud-serp-api
+contact: support@glorycloud.com
 label:
   en_US: glorycloud SERP API
   ja_JP: glorycloud SERP API

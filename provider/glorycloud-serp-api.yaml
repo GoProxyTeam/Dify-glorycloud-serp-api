@@ -1,0 +1,39 @@
+identity:
+  author: glorycloud
+  name: glorycloud-serp-api
+  label:
+    en_US: glorycloud SERP API
+    zh_Hans: glorycloud SERP API
+    pt_BR: glorycloud SERP API
+    ja_JP: glorycloud SERP API
+  description:
+    en_US: Search Google web, images, shopping, news and maps through the GloryCloud SERP API. New users receive $1 in signup credit, redeemable for 1,000 free queries.
+    zh_Hans: 通过 GloryCloud SERP API 获取 Google 网页、图片、购物、新闻和地图的搜索结果。
+    ja_JP: Search Google web, images, shopping, news and maps through the GloryCloud SERP API.
+    pt_BR: Search Google web, images, shopping, news and maps through the GloryCloud SERP API.
+  icon: icon.png
+  tags:
+  - search
+credentials_for_provider:
+  api_key:
+    type: secret-input
+    required: true
+    label:
+      en_US: GloryCloud API Key
+      zh_Hans: GloryCloud API Key
+    placeholder:
+      en_US: Enter the API key from your GloryCloud account
+      zh_Hans: 请输入在 GloryCloud 官网获取的 API Key
+    help:
+      en_US: Visit GloryCloud to obtain an API key
+      zh_Hans: 从 GloryCloud 官网获取 API Key
+    url: https://www.glorycloud.com/dashboard/settings/?link=1142bb
+tools:
+- tools/google_search.yaml
+- tools/google_image.yaml
+- tools/google_shopping.yaml
+- tools/google_news.yaml
+- tools/google_maps.yaml
+extra:
+  python:
+    source: provider/glorycloud-serp-api.py
